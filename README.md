@@ -3,12 +3,18 @@ https://github.com/joelaolowu/SimplifyIAM-portfolio.git
 
 www.linkedin.com/in/joelaolowu
 
-#PROJECT PROBLEM: Simplifytech Service Company is a start up with over 200 staffs has a manual identity issue. HR updates spread sheet. IT manually creates accounts one by one. Nobody knows who has access tp what......
+#PROJECT PROBLEM: 
+
+Simplifytech Service Company is a start up with over 200 staffs has a manual identity issue. HR updates spread sheet. IT manually creates accounts one by one. Nobody knows who has access tp what......
 
 
-#MY JOB : To design and build their identity infrastructure from scratch over fve weeks and report to CISO. 
+#MY JOB : 
 
-#TASK 1: I met with the IAM stakeholders. The Stake holders i met with in the first week after i did the Stakeholhers Map were:
+To design and build their identity infrastructure from scratch over fve weeks and report to CISO. 
+
+#TASK 1: 
+
+I met with the IAM stakeholders. The Stake holders i met with in the first week after i did the Stakeholhers Map were:
 
 The HR TEAM: i did because HR owns the identity source and it's the quality and autentic data source
 
