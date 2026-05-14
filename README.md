@@ -211,5 +211,4 @@ sudo systemctl restart midpoint
 
 
 
-
-As an IAM person, i speak five different compulsory business languages that are not technical. I speak data,  and evidence fluently. 
+As an IAM person, i speak five different compulsory bu
