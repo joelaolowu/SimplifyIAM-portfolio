@@ -88,13 +88,25 @@ Sailpoint and Midpoint decided here for convenience and real time capabilities b
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 MY PRIVATE LAB ENVIRONMENT: 
 
 This LAB is running till date. Please visit the server sites as links will be provided below. 
 
 
 
-Ny private Lab Environment Details:
+My private Lab Environment Details:
 
 Server: simplifyiam-Joel-Adekunle-001
 
