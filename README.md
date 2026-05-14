@@ -122,20 +122,20 @@ The three components in my lab:
 
 SimplifyIAM (midPoint) is my IGA platform. This is where you configure provisioning rules, run reconciliation tasks, and manage identities. Access it at:
 
-http://<your-ip>:8080/midpoint
+http://178.104.232.13/midpoint
 Username: administrator
-Password: @Admin123
+
 
 SimplifyHR is my simulated HR system. This is my authoritative source of employees. When you add or terminate someone here, SimplifyIAM detects the change. Access it at:
 
-http://<your-ip>:8085
+http://178.104.232.13:8085
 No login required
 
 phpLDAPadmin is my LDAP directory browser. This is where you see the target system -- accounts being created, modified, and disabled automatically. Access it at:
 
-http://<your-ip>:8089
+http://178.104.232.13:8089
 Bind DN: cn=Directory Manager
-Password: Admin1234!
+
 
 
 
@@ -147,11 +147,11 @@ SSH is built into both Windows and Mac. No additional software needed.
 
 Windows — open PowerShell or Command Prompt:
 
-ssh labuser@<your-ip>
+ssh labuser@
 
 Mac — open Terminal:
 
-ssh labuser@<your-ip>
+ssh labuser@178.104.232.13
 
 password is for labuser: simplifyiam
 
