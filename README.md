@@ -14,7 +14,7 @@ To design and build their identity infrastructure MVP from scratch over five wee
 
 #TASK 1: 
 
-I met with the IAM stakeholders for requirement gathering. AS an IAM person, to achieve th Requirements gathering, I had to speak five different Languages and not just Technical. The Languages are Data, Risk, Entitlements, Decision making and Company's Bottom line. The Stake holders i met with in the first week stakeholders workshop after i did the Stakeholhers Map were:
+I met with the IAM stakeholders for requirement gathering. AS an IAM person, to achieve the Requirements gathering, I had to speak five different Languages and not just Technical. The Languages are Data, Risk, Entitlements, Decision making and evidence while keeping in mind the Company's Bottom line. We had to gather requirements from CISO/IT security discovery, HR workshops, Application workshops, Business workshops and Audit workshop. The Stake holders we met with in the first week stakeholders workshops after i did the Stakeholhers Map were:
 
 
 The HR TEAM: i did because HR owns the identity source and it's the quality and autentic data source
@@ -33,6 +33,35 @@ BUSINESS MANAGERS: They approve or revoke access during certifications, They mak
 
 
 THE IAM TEAM: I alongside my team mates represented the IAM team. We  were the implementers. 
+
+
+
+
+WHAT SIMPLIFYTECH REALLY NEEDS THAT MADE ME DECIDE ON THE ARCHITECTURE 
+
+IDENTITY SOURCE
+
+The HR spreadsheet needs a system of records that IGA can read automatically. No manual export. 
+
+THE TARGET SYSTEMS 
+
+AD equivalent for all staff accounts. Every employee needs. directory account on day 1. 
+
+LIFECYCLE AUTOMATION 
+
+Joiner, mover an leaver mut be triggered by HR events. No IT tickets. Zero manual provisioning. 
+
+AUDIT TRAIL
+
+SOC2 requires evidence of who had access ? When it was granted ? when it was removed ? and who approved it ? 
+
+
+
+
+
+
+
+
 
 
 
@@ -223,4 +252,3 @@ sudo systemctl restart midpoint
 
 
 
-As an IAM person, i speak five different compulsory bu
