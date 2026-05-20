@@ -74,9 +74,6 @@ SOC2 requires evidence of who had access ? When it was granted ? when it was rem
 
 
 
-
-
-
 Based on Requirements gathered from the workshops after series of arguements and deliberations with the Stakeholders, we decided to go with the following: For...
 
 1.  HR
@@ -248,6 +245,94 @@ sudo systemctl stop midpoint
 
 # Restart a service
 sudo systemctl restart midpoint
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Phase 1 Summary
+
+•       SimplifyHR CSV resource created and connected
+•       Seven inbound mappings configured and saved
+•       Three synchronization reactions configured
+•       Correlation rule set - Item=name, Exact match
+•       Reconciliation ran - six focus objects created in midPoint
+•       Data preview shows all six employees as LINKED
+
+Phase 2
+•       OpenLDAP created as a target resource in midPoint
+•       Object type configured - inetOrgPerson with nsAccount auxiliary class
+•       Seven outbound mappings configured including CN and DN scripts
+•       Synchronization reactions configured on OpenLDAP resource
+•       Correlation rule configured to link LDAP accounts to focus objects
+•       Employee role updated with OpenLDAP construction - the missing link
+•       Object Template configured - Employee role assigned automatically to all users
+•       SimplifyHR reconciliation re-run - six accounts appear in ou=people in OpenLDAP
+•       Leaver workflow - Oliver Bennett terminated, account moves to ou=inactive
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+What i Built...
+
+SimplifyHR connected to midPoint as a CSV source resource
+Six employee identities created automatically in midPoint via reconciliation
+OpenLDAP connected as a target resource with full outbound mappings including CN and DN scripts
+Six LDAP accounts provisioned automatically to ou=people - full attribute set including costcenter
+Live joiner demonstrated - John Wick added in SimplifyHR, reconciliation run, account appeared in ou=people automatically with zero manual steps
+Leaver process - Oliver Bennett terminated in SimplifyHR, LDAP account removed from ou=people automatically on next reconciliation run
+Full audit trail in midPoint - every identity event logged with timestamp and initiator
+
+
 
 
 
