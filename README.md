@@ -3,8 +3,13 @@ https://github.com/joelaolowu/SimplifyIAM-portfolio.git
 
 www.linkedin.com/in/joelaolowu
 
+
 MY MIDPOINT URL   : http://178.104.232.13:8080/midpoint/login?0
+
+
 MY SIMPLIFYHR URL : http://178.104.232.13:8085/
+
+
 LDAP :            : http://178.104.232.13:8089/cmd.php?server_id=1&redirect=true
 
 
