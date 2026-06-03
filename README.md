@@ -3,6 +3,12 @@ https://github.com/joelaolowu/SimplifyIAM-portfolio.git
 
 www.linkedin.com/in/joelaolowu
 
+MY MIDPOINT URL   : http://178.104.232.13:8080/midpoint/login?0
+MY SIMPLIFYHR URL : http://178.104.232.13:8085/
+LDAP :            : http://178.104.232.13:8089/cmd.php?server_id=1&redirect=true
+
+
+
 #PROJECT PROBLEM: 
 
 Simplifytech Service Company is a start up Comoany with over 200 staffs. It has a manual identity issue. The HR Department updates spread sheets as Staff lists. IT manually creates accounts one by one. Nobody knows who has access to what......
