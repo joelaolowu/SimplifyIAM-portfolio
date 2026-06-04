@@ -323,6 +323,9 @@ sudo systemctl restart midpoint
 
 
 
+
+
+
 Phase 1 Summary
 
 •       SimplifyHR CSV resource created and connected
@@ -919,9 +922,203 @@ Verify in phpLDAPadmin
 ✅  Verify: phpLDAPadmin shows six accounts under ou=people. ou=inactive exists and is empty - it will receive terminated accounts.
 
 
+:::WHAT I BUILT:::
+
+
+•       OpenLDAP resource created with LdapConnector
+•       Object type configured: inetOrgPerson with nsAccount auxiliary class
+•       Seven outbound mappings: givenName, sn, cn (script), DN (script), mail, departmentNumber, employeeNumber
+•       DN script routes active users to ou=people and terminated users to ou=inactive
+•       Synchronization reactions and correlation rule configured on OpenLDAP resource
+•       Employee role updated with OpenLDAP construction inducement
+•       Six accounts provisioned to ou=people automatically via reconciliation
+
+
+
+
+
+
+
+
+
+
+
+
+::: THE JOINER PROCESS  :::
+
+
+
+Joiner Process
+New employee provisioned automatically - SimplifyHR → midPoint → OpenLDAP
+
+ 
+1, Add New Employee in SimplifyHR
+
+ 
+Go to SimplifyHR at http://[your-ip]:8085
+Click the + Provision Employee button (top right).
+  
+Fill in the form:
+1.     First Name: John
+2.     Last Name: Wick
+3.     Organizational Department: Operations
+The Pipeline Payload Preview shows exactly what will be written to hr.csv - empid auto-assigned as 1007, costcenter auto-generated as OPS-auto.
+4.     Click Commit Record
+ 
+✅  Verify: SimplifyHR now shows Total Workforce=7, Active Identities=7, John Wick appears as empid 1007 in the list
+
+ 
+2, Run SimplifyHR Reconciliation Task
+
+ 
+Go to midPoint → Server tasks → All tasks.
+Find: Reconciliation task: SimplifyHR: Account
+5.     Click Run now
+Wait for the task to complete - watch the status indicator turn green.
+  
+This single task triggers the entire Joiner pipeline:
+
+1. midPoint reads the CSV and detects John Wick as a new Unmatched record
+2. A new focus object is created for John Wick
+3. The Employee Template fires - Employee role is assigned automatically
+4. The Employee role construction triggers - midPoint creates John Wick's LDAP account in ou=people
+
+All of this happens in one reconciliation run with zero manual steps.
+
+ 
+3, Verify in midPoint Users Page
+
+Go to Administration → Users.
+
+John Wick now appears as user 1007 with email 1007@simplifytech.com.
+  
+Accounts column shows 2 for John Wick - one account in SimplifyHR resource (shadow), one account in OpenLDAP. This confirms end-to-end provisioning worked.
+
+
+
+
+
+
+4, Verify in phpLDAPadmin
+
+ 
+Open phpLDAPadmin at http://[your-ip]:8089
+Navigate to ou=people - you should now see seven entries: uid=1001 through uid=1007.
+  
+✅  Verify: uid=1007 (John Wick) appears under ou=people. Seven accounts total. ou=inactive is still empty.
+
+ 
+Joiner process complete.
+
+
+New employee added in SimplifyHR → reconciliation run → focus object created in midPoint → Employee role assigned automatically → LDAP account created in ou=people.
+Zero manual steps after the initial SimplifyHR entry.
+
+
  
 
  
+
+
+ 
+::: LEAVER PROCESS :::
+
+Leaver Process
+
+Employee terminated in HR - account automatically removed from OpenLDAP
+
+ 
+5, Trigger Leaver Flow for Oliver Bennett in SimplifyHR
+
+ 
+Oliver Bennett (empid 1006, Engineering, ENG-004) is being terminated.
+In SimplifyHR, find Oliver Bennett in the Identity Records list.
+6.     Click Trigger Leaver Flow next to Oliver Bennett
+The button for Oliver Bennett becomes highlighted - confirming the action is about to fire.
+  
+6, Run SimplifyHR Reconciliation Task
+
+ 
+Go to midPoint → Server tasks → All tasks.
+7.     Click Run now on Reconciliation task: SimplifyHR: Account
+Wait for task to complete.
+
+After the task completes, check SimplifyHR:
+ 
+✅  Verify: SimplifyHR: Oliver Bennett (1006) shows Terminated status. Active Identities=6, Terminated Records=1.
+
+ 
+7, Verify Oliver Bennett Disabled in midPoint
+
+ 
+Go to midPoint → Administration → Users.
+User 1006 (Oliver Bennett) shows a disabled icon - the activation status tooltip says Activation Status: disabled.
+  
+Oliver Bennett's Accounts column now shows 1 - only the SimplifyHR shadow remains.
+The OpenLDAP account has been deleted.
+
+***Note: In this lab configuration the account is deleted from OpenLDAP on termination.
+In a production environment you would configure the DN script to move the account to ou=inactive instead - see Phase 2 guide for the DN script configuration.
+
+8, Verify Account Deleted in phpLDAPadmin
+
+ 
+Open phpLDAPadmin and refresh the tree.
+
+Navigate to ou=people - you should now see six entries.
+  
+✅  Verify: uid=1006 (Oliver Bennett) is no longer in ou=people. Six accounts remain: 1001-1005 and 1007 (John Wick).
+
+
+
+
+
+Leaver process complete.
+
+Oliver Bennett terminated in SimplifyHR → reconciliation run → Oliver Bennett disabled in midPoint → OpenLDAP account deleted.
+
+Zero manual steps after the Trigger Leaver Flow action in SimplifyHR.
+
+The full audit trail in the midPoint Records tab shows the complete lifecycle for Oliver Bennett: account created, provisioned, and removed - all timestamped.
+
+
+Summary Event -Trigger-Result
+
+
+Joiner-Provision Employee in SimplifyHR + run reconciliation
+Focus object created, Employee role assigned, LDAP account created in ou=people
+
+Leaver
+
+Trigger Leaver Flow in SimplifyHR + run reconciliation
+Focus object disabled in midPoint, LDAP account deleted from ou=people
+
+
+
+
+
+:::What You Built:::......
+
+
+-SimplifyHR connected to midPoint as a CSV source resource
+
+
+-Six employee identities created automatically in midPoint via reconciliation
+
+-OpenLDAP connected as a target resource with full outbound mappings including CN and DN scripts
+
+-Six LDAP accounts provisioned automatically to ou=people - full attribute set including costcenter
+
+-Live joiner demonstrated - John Wick added in SimplifyHR, reconciliation run, account appeared in ou=people automatically with zero manual steps
+
+-Leaver process - Oliver Bennett terminated in SimplifyHR, LDAP account removed from ou=people automatically on next reconciliation run
+Full audit trail in midPoint - every identity event logged with timestamp and initiator
+
+
+
+
+
+
 
 
 
