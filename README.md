@@ -153,6 +153,43 @@ Sailpoint and Midpoint decided here for convenience and real time capabilities b
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :::MY PRIVATE LAB ENVIRONMENT:::
 
 
