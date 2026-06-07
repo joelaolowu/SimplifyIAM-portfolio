@@ -4,13 +4,10 @@ https://github.com/joelaolowu/SimplifyIAM-portfolio.git
 www.linkedin.com/in/joelaolowu
 
 
-MY MIDPOINT URL   : http://178.104.232.13:8080/midpoint/login?0
 
 
-MY SIMPLIFYHR URL : http://178.104.232.13:8085/
 
 
-LDAP :            : http://178.104.232.13:8089/cmd.php?server_id=1&redirect=true
 
 
 
@@ -23,7 +20,7 @@ Simplifytech Service Company is a start up Company with over 200 staffs. It has 
 #MY JOB::: 
 
 
-To design and build their identity infrastructure MVP from scratch over five weeks and report to CISO. 
+To design and build their identity infrastructure Minimum Viable Product from scratch over five weeks and report to CISO. 
 
 
 
@@ -201,7 +198,7 @@ My private Lab Environment Details:
 
 Server: simplifyiam-Joel-Adekunle-001
 
-IP Address: 178.104.232.13
+
 
 
 
@@ -215,19 +212,19 @@ The three components in my lab:
 SimplifyIAM (midPoint) is my IGA platform. This is where you configure provisioning rules, run reconciliation tasks, and manage identities. Access it at:
 
 
-http://178.104.232.13/midpoint
-Username: administrator
+http://[SERVER IP]/midpoint
+
 
 
 SimplifyHR is my simulated HR system. This is my authoritative source of employees. When you add or terminate someone here, SimplifyIAM detects the change. Access it at:
 
-http://178.104.232.13:8085
+http://[SERVER IP]:8085
 No login required
 
 
 phpLDAPadmin is my LDAP directory browser. This is where you see the target system -- accounts being created, modified, and disabled automatically. Access it at:
 
-http://178.104.232.13:8089
+http://[SERVER IP]:8089
 Bind DN: cn=Directory Manager
 
 
@@ -241,8 +238,8 @@ SSH is built into both Windows and Mac. No additional software needed.
 
 Windows — open PowerShell or Command Prompt:
 
-ssh labuser@178.104.232.13
-password is simplifyiam for now unless i change it.
+ssh labuser@[SERVER IP]
+password is [SSH PASSWORD] for now unless i change it.
 
 
 
@@ -250,9 +247,9 @@ password is simplifyiam for now unless i change it.
 
 Mac — open Terminal:
 
-ssh labuser@178.104.232.13
+ssh labuser@[SERVER IP]
 
-password for labuser: simplifyiam
+password for labuser: [SSH PASSWORD]
 
 On first login you will be prompted to accept the server's fingerprint — type yes and press Enter.
 
