@@ -1,6 +1,6 @@
 # SimplifyIAM-portfolio at https://github.com/joelaolowu/SimplifyIAM-portfolio.git
 
-Hello all, My name is Joel A. Olowu an IAM Engineer with three years Experience in IGA, CIAM, Access Management and lately PAM. my linked profile can be viewed at www.linkedin.com/in/joelaolowu
+Hello all, My name is Joel A. Olowu an IAM Engineer with three years Experience in IGA, CIAM, Access Management and lately PAM. my linkedin profile can be viewed at www.linkedin.com/in/joelaolowu
 
 
 
@@ -19,7 +19,7 @@ Simplifytech Service Company is a start up Company with over 200 staffs. It has 
 #MY JOB::: 
 
 
-To design and build their identity infrastructure Minimum Viable Product from scratch over five weeks and report to CISO. 
+To design and build their identity infrastructure Minimum Viable Product where there would be birthright provisioning for users from scratch over five weeks and report to CISO. 
 
 
 
@@ -272,7 +272,7 @@ systemctl status dirsrv@ldap1
 
 A healthy service shows Active: active (running) in green as below
 
-! (alt image) [https://github.com/joelaolowu/SimplifyIAM-portfolio/blob/2c8e74b774861d2e936556a10dc9d66db2532f17/checking%20to%20confirm%20services%20.png]
+! [Alt image](https://github.com/joelaolowu/SimplifyIAM-portfolio/blob/2c8e74b774861d2e936556a10dc9d66db2532f17/checking%20to%20confirm%20services%20.png)
 
 Log Files
 
