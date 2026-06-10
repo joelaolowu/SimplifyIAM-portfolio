@@ -1,7 +1,6 @@
-# SimplifyIAM-portfolio
-https://github.com/joelaolowu/SimplifyIAM-portfolio.git
+# SimplifyIAM-portfolio at https://github.com/joelaolowu/SimplifyIAM-portfolio.git
 
-www.linkedin.com/in/joelaolowu
+Hello all, My name is Joel A. Olowu an IAM Engineer with three years Experience in IGA, CIAM, Access Management and lately PAM. my linked profile can be viewed at www.linkedin.com/in/joelaolowu
 
 
 
@@ -230,36 +229,34 @@ Bind DN: cn=Directory Manager
 
 
 
-Accessing my Lab Server
+I Access my Lab Server through SSH Access
 
-Through SSH Access
+SSH is built into both Windows and Mac. No additional software needed for SSH.
 
-SSH is built into both Windows and Mac. No additional software needed.
-
-Windows — open PowerShell or Command Prompt:
+for Windows — open PowerShell or Command Prompt:
 
 ssh labuser@[SERVER IP]
-password is [SSH PASSWORD] for now unless i change it.
+password is [SSH PASSWORD] .
 
 
 
 
 
-Mac — open Terminal:
+for Mac — open Terminal:
 
 ssh labuser@[SERVER IP]
 
 password for labuser: [SSH PASSWORD]
 
-On first login you will be prompted to accept the server's fingerprint — type yes and press Enter.
+On first login i am prompted to accept the server's fingerprint —so i type yes and press Enter.
 
 
 
-Checking Service Status
+For Checking Service Status on the IGA, Connected makeshift HR platform and LDAP,
 
-Run these after login to confirm everything is running:
+I run these bash commands after login to confirm everything is running:
 
-bash
+
 
 # Status of all SimplifyIAM components
 sudo /opt/simplifyiam/status-lab.sh
@@ -273,9 +270,9 @@ systemctl status simplifyhr
 # 389 Directory Server (LDAP)
 systemctl status dirsrv@ldap1
 
-A healthy service shows Active: active (running) in green.
+A healthy service shows Active: active (running) in green as below
 
-
+! (alt image) [https://github.com/joelaolowu/SimplifyIAM-portfolio/blob/2c8e74b774861d2e936556a10dc9d66db2532f17/checking%20to%20confirm%20services%20.png]
 
 Log Files
 
