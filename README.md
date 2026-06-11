@@ -217,6 +217,8 @@ http://[SERVER IP]/midpoint
 
 SimplifyHR is my simulated HR system. This is my authoritative source of employees. When you add, move or terminate someone here, SimplifyIAM detects the change. I demonstration to prove these is done below.
 
+! [Alt text] (https://github.com/joelaolowu/SimplifyIAM-portfolio/blob/bd40dfaedc3b4ac5b6365793ddbf8d419eea1a79/HR%20attributes%20to%20be%20sent%20to%20IGA.png)
+
 http://[SERVER IP]:8085
 No login required
 
