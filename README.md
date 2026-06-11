@@ -208,14 +208,14 @@ Server: simplifyiam-Joel-Adekunle-001
 The three components in my lab:
 
 
-SimplifyIAM (midPoint) is my IGA platform. This is where you configure provisioning rules, run reconciliation tasks, and manage identities. Access it at:
+SimplifyIAM (midPoint) is my IGA platform. It is similar to sailpoint. This is where you configure provisioning rules, run reconciliation tasks, and manage identities. Access it at:
 
 
 http://[SERVER IP]/midpoint
 
 
 
-SimplifyHR is my simulated HR system. This is my authoritative source of employees. When you add or terminate someone here, SimplifyIAM detects the change. Access it at:
+SimplifyHR is my simulated HR system. This is my authoritative source of employees. When you add, move or terminate someone here, SimplifyIAM detects the change. I demonstration to prove these is done below.
 
 http://[SERVER IP]:8085
 No login required
@@ -272,7 +272,7 @@ systemctl status dirsrv@ldap1
 
 A healthy service shows Active: active (running) in green as below
 
-! [Alt image]https://github.com/joelaolowu/SimplifyIAM-portfolio/blob/2c8e74b774861d2e936556a10dc9d66db2532f17/checking%20to%20confirm%20services%20.png
+! [image alt](https://github.com/joelaolowu/SimplifyIAM-portfolio/blob/e73e90b2699ed4849a43a14347209febd06513bc/checking%20to%20confirm%20services%20.png)
 
 Log Files
 
