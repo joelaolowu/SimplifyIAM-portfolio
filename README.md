@@ -272,7 +272,7 @@ systemctl status dirsrv@ldap1
 
 A healthy service shows Active: active (running) in green as below
 
- ! [image Alt](https://github.com/joelaolowu/SimplifyIAM-portfolio/blob/e73e90b2699ed4849a43a14347209febd06513bc/checking%20to%20confirm%20services%20.png)
+ ! [Alt text] (https://github.com/joelaolowu/SimplifyIAM-portfolio/blob/cafaa12aa8f64b2dc9444a2ec77dfacc5dc90ce1/checking%20to%20confirm%20services%20.png)
 
 Log Files
 
