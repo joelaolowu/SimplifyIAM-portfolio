@@ -1,6 +1,6 @@
 # SimplifyIAM-portfolio at https://github.com/joelaolowu/SimplifyIAM-portfolio.git
 
-Hello all, My name is Joel A. Olowu an IAM Engineer with three years Experience in IGA, CIAM, Access Management and lately PAM. my linkedin profile can be viewed at www.linkedin.com/in/joelaolowu
+Hello all, My name is Joel A. Olowu an IAM Engineer with Ten years IT experience and three years Experience in IGA, CIAM, Access Management,PAM and Active Directory/Microsoft Entra ID. my linkedin profile can be viewed at www.linkedin.com/in/joelaolowu
 
 
 
